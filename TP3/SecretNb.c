@@ -6,25 +6,25 @@
 
 int main()
 {
-   int secretNb = 0,userInput;
-   srand(time(NULL));
-   secretNb = rand() % (NB_MAX + 1);
-   scanf("%d",&userInput);
+  int secretNb = 0,userInput;
+  srand(time(NULL));
+  secretNb = rand() % (NB_MAX + 1);
+  printf("Pick a number\n");
+  canf("%d",&userInput);
    
-   
-   while (userInput != secretNb)
-   {
-      if(userInput < secretNb)
-      {
-        printf("Plus petit\n");
-      }
-      else
-      {
-        printf("Plus grand\n");
-      }
-      printf("Votre choix ?\n");
-      scanf("%d",&userInput);
-   }
-   printf("Well played! The secret number is %d\n",secretNb);
-   return EXIT_SUCCESS;
+  while (userInput != secretNb)
+  {
+    if(userInput < secretNb)
+    {
+      printf("Lower\n");
+    }
+    else
+    {
+      printf("Higher\n");
+    }
+    printf("Your Choice ?\n");
+    scanf("%d",&userInput);
+  }
+  printf("Well played! The secret number is %d\n",secretNb);
+  return EXIT_SUCCESS;
 }
